@@ -29,6 +29,18 @@
             KeyWait F17
             Send {Alt Up}{LButton Up}
             }
+        else if WinActive("ahk_exe houdinifx.exe")
+            {
+            Send {Alt Down}{LButton Down}
+            KeyWait F17
+            Send {Alt Up}{LButton Up}
+            }
+        else if WinActive("ahk_exe Fusion360.exe")
+            {
+            Send {Shift Down}{Mbutton Down}
+            KeyWait F17
+            Send {Shift Up}{Mbutton Up}
+            }
         return
 
 ; PAN
@@ -57,6 +69,18 @@
             KeyWait F16
             Send {Alt Up}{MButton Up}
             }
+        else if WinActive("ahk_exe houdinifx.exe")
+            {
+            Send {Alt Down}{MButton Down}
+            KeyWait F16
+            Send {Alt Up}{MButton Up}
+            }
+        else if WinActive("ahk_exe Fusion360.exe")
+            {
+            Send {MButton Down}
+            KeyWait F16
+            Send {MButton Up}
+            }
         return
 
 ; Zoom-Dolly
@@ -84,5 +108,17 @@
             Send {Alt Down}{RButton Down}
             KeyWait F15
             Send {Alt Up}{RButton Up}
+            }
+        if WinActive("ahk_exe houdinifx.exe")
+            {
+            Send {Alt Down}{RButton Down}
+            KeyWait F15
+            Send {Alt Up}{RButton Up}
+            }
+        if WinActive("ahk_exe Fusion360.exe")
+            {
+            Send {ctrl Down}{Shift Down}{MButton Down}
+            KeyWait F15
+            Send {ctrl Up}{Shift Up}{MButton Up}
             }
         return
